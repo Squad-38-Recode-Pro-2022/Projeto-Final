@@ -1,0 +1,69 @@
+package br.org.com.recode.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.org.com.recode.model.Usuario;
+import br.org.com.recode.repository.UsuarioRepository;
+
+@CrossOrigin(origins = "http://localhost:3000")
+@RestController
+public class UsuarioController {
+
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	// lista todos os destinos
+	@GetMapping("/cadastro-usuario")
+	public List<Usuario> getAllUsuarios() {
+		return usuarioRepository.findAll();
+	}
+	
+	// create destino rest api
+	@PostMapping("/cadastro-usuario")
+	public Usuario createUsuario(@RequestBody Usuario usuario) {
+		return usuarioRepository.save(usuario);
+	}
+
+	// get destino by id rest api
+	@GetMapping("/cadastro-usuario/{id}")
+	public Usuario getUsuarioById(@PathVariable Long id) {
+		return usuarioRepository.findById(id).get();
+	}
+	
+	// update destino rest api
+	
+	@PutMapping("/cadastro-usuario/{id}")
+	public Usuario updateUsuario(@PathVariable Long id, @RequestBody Usuario usuarioDetails) {
+		Usuaurio usuario = usuarioRepository.findById(id).get();
+		
+		usuario.set
+		destino.setDestino(destinoDetails.getDestino());
+		destino.setData_ida(destinoDetails.getData_ida());
+		destino.setHorario_ida(destinoDetails.getHorario_ida());
+		destino.setData_volta(destinoDetails.getData_volta());
+		destino.setHorario_volta(destinoDetails.getHorario_volta());
+		destino.setCia_aerea(destinoDetails.getCia_aerea());
+		destino.setHotel(destinoDetails.getHotel());
+		destino.setObservacoes(destinoDetails.getObservacoes());
+		destino.setValor(destinoDetails.getValor());
+		
+		return destinoRepository.save(destino);
+	}
+	
+	// delete destino rest api
+	@DeleteMapping("/cadastro-destino/{id}")
+	public void deleteDestino(@PathVariable Long id) {
+		destinoRepository.deleteById(id);
+	}
+	
+}
