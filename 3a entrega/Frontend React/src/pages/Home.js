@@ -4,7 +4,6 @@ import HomeNavbar from '../components/HomeNavbar';
 import HomeFooter from '../components/HomeFooter';
 
 import LoginIcon from '../img/right-to-bracket-solid-white.png';
-import SignupIcon from '../img/address-card-solid-white.png';
 
 const Home = () => {
     return (
