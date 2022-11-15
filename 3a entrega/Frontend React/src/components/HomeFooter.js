@@ -11,11 +11,10 @@ const HomeFooter = () => {
                         <div className="footer-menu">
                             <ul type="none">
                                 <li><a href="/">Home</a></li>
-                                <li><a href="views/equipe.html">Quem Somos</a></li>
-                                <li><a href="views/login.html">Login</a></li>
-                                <li><a href="./views/usuarios/cadastro-usuario.jsp">Cadastre-se</a></li>
-                                <li><a href="views/contato.html">Contato</a></li>
-                                <li><a href="views/admin/admin-login.html">Admin</a></li>
+                                <li><a href="/quem-somos">Quem Somos</a></li>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/contato">Contato</a></li>
+                                <li><a href="/admin-login">Admin</a></li>
                             </ul>
                         </div>
                         <div className="footer-logo">

@@ -2,10 +2,6 @@
     font-size: 20px;
 }
 
-.nav-item {
-    font-size: 20px;
-}
-
 .horizontal-line {
     border: 5px solid;
 }
@@ -27,6 +23,11 @@ h1 {
 #texto-capa {
     color: white;
     padding-left: 20px;
+    text-align: center;
+}
+
+.botoes {
+    text-align: center;
 }
 
 .botao {
@@ -59,6 +60,11 @@ h1 {
 .footer-menu a {
     text-decoration: none;
     color: grey;
+}
+
+.footer-logo {
+	margin-top: 50px;
+    margin-left: 50px;
 }
 
 .row-endfooter {

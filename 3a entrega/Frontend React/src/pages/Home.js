@@ -25,15 +25,10 @@ const Home = () => {
                         <h5 id="texto-capa">Acesse e conheça o nosso sistema fazendo o
                             seu cadastro ou login abaixo.</h5>
                         <div className="botoes">
-                            <a href="views/login.html">
+                            <a href="/login">
                                 <button role="button" className="botao">
                                     <img src={LoginIcon} alt="Login icon"
                                         width="20px" height="16px" /> LOGIN
-                                </button>
-                            </a> <a href="./views/usuarios/cadastro-usuario.jsp">
-                                <button role="button" className="botao">
-                                    <img src={SignupIcon} alt="Sign Up Icon" width="20px"
-                                        height="16px" /> CADASTRE-SE
                                 </button>
                             </a>
                         </div>
